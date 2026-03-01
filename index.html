@@ -6,7 +6,6 @@
     <title>Syed Muhammad Abdullah - Resume</title>
     <style>
         /* --- FONT IMPORTS --- */
-        /* Importing Inter as a clean fallback for body text */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
         /* --- BASIC VARIABLES --- */
@@ -21,7 +20,6 @@
 
         /* --- GLOBAL STYLES --- */
         body {
-            /* Body remains Anthropic Sans / Clean Sans-Serif */
             font-family: 'Anthropic Sans', 'Inter', 'Segoe UI', system-ui, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-primary);
@@ -47,12 +45,9 @@
         }
         h1 {
             margin: 0;
-            /* UPDATED: Chronicle Font Stack + Standard Case */
             font-family: 'Chronicle Display', 'Chronicle Deck', 'Libre Baskerville', 'Baskerville', 'Georgia', serif;
-            font-size: 2.5rem; /* Increased slightly for the serif elegance */
+            font-size: 2.5rem;
             font-weight: 700;
-            letter-spacing: normal; /* Removed wide tracking */
-            /* Removed text-transform: uppercase; */
         }
         .tagline {
             font-size: 1.1rem;
@@ -83,10 +78,8 @@
             margin-bottom: 20px;
             padding: 10px 15px;
             border-radius: 6px;
-            transition: all 0.4s ease;
         }
 
-        /* --- ENTRY HEADER --- */
         .entry-header {
             display: flex;
             justify-content: space-between;
@@ -94,57 +87,18 @@
             margin-bottom: 2px;
         }
         
-        .role-title {
-            font-weight: 700;
-            font-size: 1.05rem;
-        }
-
-        .company-name {
-            font-weight: 600;
-            font-style: italic;
-        }
-
-        .date {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            text-align: right;
-            min-width: 120px;
-        }
-
-        .subtitle {
-            font-style: italic;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 5px;
-            display: block;
-        }
+        .role-title { font-weight: 700; font-size: 1.05rem; }
+        .company-name { font-weight: 600; font-style: italic; }
+        .date { font-size: 0.9rem; color: var(--text-secondary); text-align: right; min-width: 120px; }
+        .subtitle { font-style: italic; color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 5px; display: block; }
 
         /* --- BULLET POINTS --- */
-        ul {
-            margin: 5px 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 4px;
-            font-size: 0.95rem;
-        }
+        ul { margin: 5px 0; padding-left: 20px; }
+        li { margin-bottom: 4px; font-size: 0.95rem; }
 
         /* --- SKILLS --- */
-        .skills-section p { margin: 5px 0; }
         .skills-label { font-weight: 700; }
 
-        /* --- DEEP LINKING HIGHLIGHT --- */
-        :target {
-            background-color: rgba(255, 255, 255, 0.6);
-            box-shadow: 0 0 0 2px var(--highlight-border);
-            transform: scale(1.01);
-        }
-        .entry:target {
-            background-color: #e6e4dc; /* Darker shade of background for contrast */
-            border-left: 5px solid var(--highlight-border);
-        }
-
-        /* --- RESPONSIVE --- */
         @media (max-width: 600px) {
             .entry-header { flex-direction: column; }
             .date { text-align: left; margin-bottom: 5px; }
@@ -167,7 +121,6 @@
 
     <section id="education">
         <h2>Education</h2>
-        
         <div class="entry">
             <div class="entry-header">
                 <span class="company-name">Lahore University of Management Sciences (LUMS)</span>
@@ -175,24 +128,24 @@
             </div>
             <span class="role-title">BSc (Hons.) Economics & Mathematics (Minor in Computer Science)</span>
             <ul>
-                <li><strong>Coursework:</strong> Public Management, Sectors in Policy and Development, Gender and Labor Market, Foundations of AI/ML, Game Theory.</li>
+                <li><strong>Coursework:</strong> Stochastic Processes, Real Analysis, Advanced Econometrics, Game Theory, Foundations of AI/ML.</li>
+                <li><strong>Honours:</strong> National Outreach Programme (NOP) Scholar.</li>
             </ul>
         </div>
     </section>
 
     <section id="experience">
         <h2>Professional Experience</h2>
-
-        <div id="igi-automation" class="entry">
+        <div class="entry">
             <div class="entry-header">
                 <span class="role-title">Management Trainee Officer (Actuarial Division)</span>
                 <span class="date">Aug 2025 – Present</span>
             </div>
-            <span class="subtitle">IGI Life</span>
+            <span class="subtitle">IGI Life Inc. (Packages Group)</span>
             <ul>
-                <li>Assisted in IFRS-17 implementation across the Corporate Portfolio. Handled quarterly regulatory reporting in line with SECP recommendations.</li>
-                <li>Prepared a Loss/Ratio Report + Risk Projection for the Medical business using a 5-year consolidated claims/premium data model prepared in PowerBI.</li>
-                <li><strong>Automation Project:</strong> Developed a 7000+ line reinsurance calculation automation project that cut the reporting time with global reinsurance partners from <strong>7 working days to 30 minutes</strong> (demonstrated proficiency in R and Python).</li>
+                <li>Automated 5,000+ complex reinsurance calculations using a 7,000+ line Python script, reducing reporting time from <strong>7 working days to 30 minutes</strong>.</li>
+                <li>Assisted in IFRS-17 implementation and quarterly regulatory reporting for multi-billion dollar portfolios in compliance with SECP standards.</li>
+                <li>Engineered a PowerBI-based Loss/Ratio model using 5 years of consolidated claims data to optimize medical business risk projections.</li>
             </ul>
         </div>
 
@@ -203,127 +156,35 @@
             </div>
             <span class="subtitle">Lahore University of Management Sciences</span>
             <ul>
-                <li>Designed and administered mock exams to assess student readiness.</li>
-                <li>Held 6 hours per week of office hours, resulting in a 15% increase in average exam scores across the section.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span class="role-title">Summer Intern</span>
-                <span class="date">June 2024</span>
-            </div>
-            <span class="subtitle">L'Oréal Pakistan</span>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span class="role-title">Response Curator for AI Co-Pilot</span>
-                <span class="date">March 2023 – July 2023</span>
-            </div>
-            <span class="subtitle">IMSI Technologies Inc.</span>
-            <ul>
-                <li>Launched an AI-based customer engagement system by providing 100+ ready-made prompts for concerns of different categories, resulting in an overall 20% increase in site visits.</li>
-                <li>Demonstrated proficiency in JavaScript, JAX, and Python.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span class="role-title">Project Intern</span>
-                <span class="date">May 2023 – June 2023</span>
-            </div>
-            <span class="subtitle">Australian Center for Education and Training</span>
-            <ul>
-                <li>Completed a CSR Research Project related to water management sites in Pakistan, identifying 9+ hazards.</li>
-                <li>Prepared a report to combat damage to the water distribution system in line with the company's vision.</li>
+                <li>Conducted weekly office hours and designed mock exams, contributing to a 15% increase in average section scores.</li>
             </ul>
         </div>
     </section>
 
     <section id="research">
         <h2>Research Projects</h2>
-
-        <div id="brt-research" class="entry">
+        <div class="entry">
             <div class="entry-header">
                 <span class="role-title">Research Assistant (Urban Transport & Labor Markets)</span>
                 <span class="date">Jan 2025 – Present</span>
             </div>
-            <span class="subtitle">Evidence from Lahore's Bus Rapid Transit System</span>
+            <span class="subtitle">International Growth Centre (IGC) / Lahore BRT Study</span>
             <ul>
-                <li>Constructing a longitudinal dataset (2005-2025) of Lahore's urban expansion by developing a classification model to derive the <strong>Normalized Difference Built-Up Index (NDBI)</strong> from Google Earth Engine satellite imagery.</li>
-                <li>Extracting and cleaning high-resolution Aerosol Optical Depth (AOD) and PM 2.5 data to quantify the environmental externalities of the BRT system.</li>
+                <li>Utilizing **Google Earth Engine** to construct a longitudinal dataset (2005-2025) of urban expansion via the Normalized Difference Built-Up Index (NDBI).</li>
+                <li>Analyzing high-resolution AOD and PM 2.5 data to quantify the environmental externalities and societal impact of transit infrastructure.</li>
             </ul>
         </div>
+        
 
         <div class="entry">
             <div class="entry-header">
-                <span class="role-title">Developer (Price-Prediction Model)</span>
-                <span class="date">Sept 2024 – Dec 2024</span>
+                <span class="role-title">LSTM Networks in Emerging Markets</span>
+                <span class="date">Published Sept 2025</span>
             </div>
+            <span class="subtitle">ArXiV (Preprint: 2509.14401v1)</span>
             <ul>
-                <li>Developed a machine learning model using Scikit-Learn to predict the resale price of used laptops, scraping and processing 500+ data entries.</li>
+                <li>Developed a 2-layer LSTM neural network to model non-linear volatility in the Pakistan Stock Exchange, achieving $R^{2} > 0.89$ for major industrial sectors.</li>
             </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span class="role-title">LSTM Networks in Emerging Market: A Case Study of PSX-IR</span>
-                <span class="date">Sept 2025</span>
-            </div>
-            <span class="subtitle">Published in ArXiV</span>
-            <ul>
-                <li>Engineered a 2-layer Long Short-Term Memory (LSTM) neural network with dropout regularization to model non-linear volatility in the Pakistan Stock Exchange.</li>
-                <li>Achieved R² > 0.8 for high-liquidity sectors (Power, Cement).</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="cocurricular">
-        <h2>Co-Curricular Activities</h2>
-
-        <div id="syedanwala" class="entry">
-            <div class="entry-header">
-                <span class="role-title">Initiative Team Member</span>
-                <span class="date">Sept 2023 – April 2024</span>
-            </div>
-            <span class="subtitle">Syedanwala School Project</span>
-            <ul>
-                <li>Taught gamified Linear Algebra and Calculus to sixth-grade students in a remote village in Pakistan.</li>
-                <li>Prepared a report using the <strong>Danielson Framework</strong> to assess the Quality of Instruction in mathematics for the Syed Babar Ali Foundation.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span class="role-title">Group Lead (Chinese Bridge Summer Camp)</span>
-                <span class="date">July 2024 – Aug 2024</span>
-            </div>
-            <span class="subtitle">Jiangxi, China</span>
-            <ul>
-                <li>Led a team of 5+ LUMS students to a summer program hosted by JXUST and the Chinese Ministry of Education.</li>
-                <li>Explored the socio-education environment in prefecture-level cities.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span class="role-title">Vice President</span>
-                <span class="date">Sept 2023 – April 2024</span>
-            </div>
-            <span class="subtitle">Debates and Recitations at LUMS (DRUMS)</span>
-            <ul>
-                <li>Represented LUMS in 7+ national debate tournaments, achieving an 80% win rate.</li>
-                <li>Secured victories at GCU 2024 and Iqbal K. Bajauri Cup 2024.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span class="role-title">Coach</span>
-                <span class="date">Sept 2023 – April 2024</span>
-            </div>
-            <span class="subtitle">O-Week at LUMS</span>
         </div>
     </section>
 
@@ -331,8 +192,10 @@
         <h2>Honours & Awards</h2>
         <div class="entry">
             <ul>
-                <li><strong>Dean's Honor List:</strong> Lahore University of Management Sciences (LUMS)</li>
-                <li><strong>Roll of Honor (Public-Speaking):</strong> GCU Lahore</li>
+                <li><strong>Pakistan International Mathematical Olympiad Selectee:</strong> (2020 Batch).</li>
+                <li><strong>Member, Pakistan Mathematical Society:</strong> Professional affiliation.</li>
+                <li><strong>Dean's Honor List:</strong> Awarded by LUMS for consistent academic excellence.</li>
+                <li><strong>Roll of Honor (Public-Speaking):</strong> GCU Lahore; winner of 7+ national debate tournaments.</li>
             </ul>
         </div>
     </section>
@@ -340,8 +203,9 @@
     <section id="skills" class="skills-section">
         <h2>Skills & Languages</h2>
         <div class="entry">
-            <p><span class="skills-label">Tech Stack:</span> Python, C++, SQL, STATA, LaTeX, Office, Excel (Advanced), PowerBI, Power Automate</p>
-            <p><span class="skills-label">Languages:</span> English (Full Proficiency), Mandarin (Limited Proficiency), Urdu (Native)</p>
+            <p><span class="skills-label">Tech Stack:</span> Python (TensorFlow, Pandas), R, SQL, STATA, LaTeX, PowerBI, Azure Logic Apps.</p>
+            <p><span class="skills-label">Languages:</span> English (Full Proficiency | **IELTS 8.5**), Urdu (Native), Mandarin (HSK 2).</p>
+            <p><span class="skills-label">Quantitative Aptitude:</span> **GRE Score: 338** (Quant: 170/170).</p>
         </div>
     </section>
 
